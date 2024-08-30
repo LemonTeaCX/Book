@@ -39,6 +39,8 @@ header {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   font-size: 12px;
   text-align: center;

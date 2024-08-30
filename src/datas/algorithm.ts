@@ -21,6 +21,11 @@ export const algorithm: Algorithm[] = [
     url: 'https://leetcode.cn/problems/nested-array-generator/description/'
   },
   {
+    no: '2667',
+    title: '创建 Hello World 函数',
+    url: 'https://leetcode.cn/problems/create-hello-world-function/'
+  },
+  {
     no: '2715',
     title: '执行可取消的延迟函数',
     url: 'https://leetcode.cn/problems/timeout-cancellation/description/'
