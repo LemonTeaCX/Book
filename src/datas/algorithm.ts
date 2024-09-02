@@ -6,6 +6,16 @@ export type Algorithm = {
 
 export const algorithm: Algorithm[] = [
   {
+    no: '600',
+    title: '不含连续1的非负整数',
+    url: 'https://leetcode.cn/problems/flatten-deeply-nested-array/description/'
+  },
+  {
+    no: '2596',
+    title: '检查骑士巡视方案',
+    url: 'https://leetcode.cn/problems/check-knight-tour-configuration/'
+  },
+  {
     no: '2625',
     title: '扁平化嵌套数组',
     url: 'https://leetcode.cn/problems/flatten-deeply-nested-array/description/'
