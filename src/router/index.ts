@@ -15,7 +15,18 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     // leetcode算法模块
-    ...useAlgorithm().routes
+    {
+      path: '/algorithm',
+      name: 'algorithm',
+      component: () => import('../views/algorithm/IndexView.vue'),
+      children: useAlgorithm().routes,
+    },
+    // ...useAlgorithm().routes,
+    {
+      path: '/tbb',
+      name: 'tbb',
+      component: () => import('../views/birthday/BirthdayView.vue')
+    },
   ]
 })
 
