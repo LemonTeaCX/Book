@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const page = ref('form')
 // const page = ref('card')
@@ -8,6 +8,8 @@ const info = ref({
   name: '',
   age: ''
 })
+
+const audioRef = ref()
 
 const onGo = () => {
   if (!info.value.name) return
@@ -19,17 +21,26 @@ const onGo = () => {
     page.value = 'card'
   }, 2000)
 }
+
+onMounted(() => {
+  // audioRef.value.play()
+})
+
+const onFocus = () => {
+  audioRef.value.play()
+}
+
 </script>
 
 <template>
   <div class="container container1" v-if="page === 'form'">
     <form class="form" autocomplete="off">
       <label for="nome">名字:</label>
-      <input type="text" class="infos" id="nome" name="nome" placeholder="输入名字，如：唐碧波，tbb，唐总" v-model="info.name">
+      <input type="text" class="infos" id="nome" name="nome" placeholder="输入名字，如：唐碧波，tbb，唐总" v-model="info.name" @focus="onFocus">
       <div class="mario"></div>
       <label for="age">芳龄:</label>
       <input type="age" id="age" name="age" placeholder="输入年龄" v-model="info.age">
-      <div class="error" v-if="info.age && info.age !== '18'">只能输入18</div>
+      <div class="error" v-if="info.age && info.age !== '18'">你才18岁,改一下</div>
 
       <button type="button" @click="onGo">Let's Go</button>
       <!-- <button type="reset" id="limpar">Clear</button> -->
@@ -49,19 +60,21 @@ const onGo = () => {
     <h1>
       Happy 18th birthday to {{ info.name }}
     </h1>
-    <img src="./img/hat.svg" alt="" class="hat">
-    <img src="./img/celebrate.svg" alt="" class="celebrate celebrate1">
-    <img src="./img/celebrate.svg" alt="" class="celebrate celebrate2">
-    <img src="./img/celebrate.svg" alt="" class="celebrate celebrate3">
-    <img src="./img/bow.svg" alt="" class="bow">
+    <img src="./assets/hat.svg" alt="" class="hat">
+    <img src="./assets/celebrate.svg" alt="" class="celebrate celebrate1">
+    <img src="./assets/celebrate.svg" alt="" class="celebrate celebrate2">
+    <img src="./assets/celebrate.svg" alt="" class="celebrate celebrate3">
+    <img src="./assets/bow.svg" alt="" class="bow">
     <div class="cake-list">
-      <img src="./img/cake.svg" alt="" class="cake">
-      <img src="./img/cake.svg" alt="" class="cake">
-      <img src="./img/cake.svg" alt="" class="cake">
-      <img src="./img/cake.svg" alt="" class="cake">
-      <img src="./img/cake.svg" alt="" class="cake">
+      <img src="./assets/cake.svg" alt="" class="cake">
+      <img src="./assets/cake.svg" alt="" class="cake">
+      <img src="./assets/cake.svg" alt="" class="cake">
+      <img src="./assets/cake.svg" alt="" class="cake">
+      <img src="./assets/cake.svg" alt="" class="cake">
     </div>
   </div>
+
+  <audio ref="audioRef" src="./mp3/HappyBirthday.mp3" controls style="display: none;"></audio>
 </template>
 
 <style scoped>
