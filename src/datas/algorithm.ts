@@ -16,6 +16,16 @@ export const algorithm: Algorithm[] = [
     url: 'https://leetcode.cn/problems/check-knight-tour-configuration/'
   },
   {
+    no: '2622',
+    title: '有时间限制的缓存',
+    url: 'https://leetcode.cn/problems/cache-with-time-limit/'
+  },
+  {
+    no: '2623',
+    title: '记忆函数',
+    url: 'https://leetcode.cn/problems/memoize/'
+  },
+  {
     no: '2625',
     title: '扁平化嵌套数组',
     url: 'https://leetcode.cn/problems/flatten-deeply-nested-array/description/'
@@ -24,6 +34,11 @@ export const algorithm: Algorithm[] = [
     no: '2626',
     title: '数组归约运算',
     url: 'https://leetcode.cn/problems/array-reduce-transformation/description/'
+  },
+  {
+    no: '2627',
+    title: '函数防抖',
+    url: 'https://leetcode.cn/problems/debounce/'
   },
   {
     no: '2649',
@@ -44,5 +59,10 @@ export const algorithm: Algorithm[] = [
     no: '2722',
     title: '根据 ID 合并两个数组',
     url: 'https://leetcode.cn/problems/join-two-arrays-by-id/'
+  },
+  {
+    no: '2725',
+    title: '间隔取消',
+    url: 'https://leetcode.cn/problems/interval-cancellation/description/'
   },
 ]

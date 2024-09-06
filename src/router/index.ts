@@ -7,8 +7,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      redirect: '/tbb',
-      // component: () => import('../views/HomeView.vue')
+      // redirect: '/tbb',
+      component: () => import('../views/HomeView.vue')
     },
     {
       path: '/about',
@@ -22,7 +22,6 @@ const router = createRouter({
       component: () => import('../views/algorithm/IndexView.vue'),
       children: useAlgorithm().routes,
     },
-    // ...useAlgorithm().routes,
     {
       path: '/tbb',
       name: 'tbb',

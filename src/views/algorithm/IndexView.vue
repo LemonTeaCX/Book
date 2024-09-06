@@ -8,12 +8,26 @@ const { list:algorithmList } = useAlgorithm()
 <template>
   <header>
     <nav>
-      <RouterLink v-for="(item, index) in algorithmList" :key="index" :to="item.path">{{ item.name }}--{{ item.title }}</RouterLink>
+      
     </nav>
   </header>
+
+  <div class="list">
+    <div class="item" v-for="(item, index) in algorithmList" :key="index">
+      <RouterLink :to="item.path">{{ item.name }}--{{ item.title }}</RouterLink>
+    </div>
+  </div>
 
   <RouterView />
 </template>
 
 <style scoped>
+.list {
+  display: flex;
+  flex-direction: column;
+  
+}
+.list a {
+  color: aquamarine;
+}
 </style>
